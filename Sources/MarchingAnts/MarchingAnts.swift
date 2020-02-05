@@ -36,4 +36,12 @@ public struct MarchingAnts {
         )
         return layer
     }
+    
+    public static func makeStrokeLayer(strokeWithPath path: CGPath, color: UIColor) -> CAShapeLayer {
+        CAShapeLayer(strokeWithPath: path, color: color)
+    }
+    
+    public static func makeAntsLayer(antsWithPath path: CGPath, color: UIColor = .black, lineDashPattern: [Int] = [6, 8]) -> CAShapeLayer {
+        CAShapeLayer(antsWithPath: path, color: color, lineDashPattern: lineDashPattern)
+    }
 }
